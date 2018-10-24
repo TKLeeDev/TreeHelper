@@ -1,0 +1,32 @@
+﻿<Window x:Class="TKFIleTreeExporter.Shell"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TKFIleTreeExporter"
+        xmlns:prism="http://prismlibrary.com/"
+        mc:Ignorable="d"
+       
+        Title="TK File tree exporter" Height="450" Width="500" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+       
+
+
+        <ContentControl prism:RegionManager.RegionName="TopRegion" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <ContentControl prism:RegionManager.RegionName="MiddleRegion" Grid.Row="2" Grid.ColumnSpan="2"/>
+        <ContentControl prism:RegionManager.RegionName="BottomRegion" Grid.Row="3" Grid.ColumnSpan="2"/>
+    </Grid>
+</Window>
