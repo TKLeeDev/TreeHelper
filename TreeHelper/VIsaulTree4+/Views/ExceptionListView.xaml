@@ -26,7 +26,11 @@
                 <md:PackIcon Kind="Add"/>
             </Button>
         </Grid>
-        <ListView Grid.Row="1" ItemsSource="{Binding exceptionList}" IsEnabled="True">
+        <DataGrid Grid.Row="1" ItemsSource="{Binding exceptionList}" IsEnabled="True">
+            
+        </DataGrid>
+        
+        <!--<ListView Grid.Row="1" ItemsSource="{Binding exceptionList}" IsEnabled="True">
             <ListView.View>
                 <GridView AllowsColumnReorder="True" ColumnHeaderToolTip="Authors">
                     <GridViewColumn Header="String" Width="70" DisplayMemberBinding="{Binding ExceptionString}" />
@@ -34,7 +38,7 @@
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <Grid>
-                                    <!--중요 : DataContext를  ListView의 Itemsource가 아닌, ViewModel로 지정.-->
+                                    --><!--중요 : DataContext를  ListView의 Itemsource가 아닌, ViewModel로 지정.--><!--
                                     <Button  Content="Remove" Command="{Binding Path=DataContext.RemoveCommand, 
                                         RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}" 
                                              CommandParameter="{Binding ExceptionString}" Cursor="Hand"/>
@@ -44,6 +48,6 @@
                     </GridViewColumn>
                 </GridView>
             </ListView.View>
-        </ListView>
+        </ListView>-->
     </Grid>
 </UserControl>
