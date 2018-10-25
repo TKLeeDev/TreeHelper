@@ -12,10 +12,10 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
-            <ColumnDefinition Width="60"/>
+            <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
-        <TextBox Grid.Column="0" IsEnabled="False" Text="{Binding Path}" HorizontalAlignment="Left" VerticalAlignment="Center" Width="{Binding RelativeSource={RelativeSource AncestorType={x:Type Grid}}, Path=ActualWidth}" Height="20" Margin="0 0 0 0"/>
-        <Button Grid.Column="1" Content="...Path" Command="{Binding OpenCommand}" Width="60" HorizontalAlignment="Right"  Height="20"/>
+        <TextBox Grid.Column="0" IsEnabled="False" Text="{Binding Path}" HorizontalAlignment="Left" VerticalAlignment="Center" Width="{Binding RelativeSource={RelativeSource AncestorType={x:Type Grid}}, Path=ActualWidth}" Height="30" Margin="0 0 0 0"/>
+        <Button Grid.Column="1" Content="...Path" Command="{Binding OpenCommand}" Width="80" HorizontalAlignment="Right"  />
     </Grid>
 
 </UserControl>
