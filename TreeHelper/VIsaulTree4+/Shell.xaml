@@ -7,23 +7,16 @@
         xmlns:prism="http://prismlibrary.com/"
         prism:ViewModelLocator.AutoWireViewModel="True"
         mc:Ignorable="d"
-        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
-        Title="TK File tree exporter" Height="450" Width="500" WindowStartupLocation="CenterScreen"
 
-          xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
-            TextElement.Foreground="{DynamicResource MaterialDesignBody}"
-            TextElement.FontWeight="Regular"
-            TextElement.FontSize="13"
-            TextOptions.TextFormattingMode="Ideal"
-             TextOptions.TextRenderingMode="Auto"
-             Background="White"
-             FontFamily="{DynamicResource MaterialDesignFont}" WindowStyle="None" BorderThickness="0" ResizeMode="NoResize">
+        Title="TK File tree exporter" Height="450" Width="500" WindowStartupLocation="CenterScreen">
+
 
 
     <Grid>
         
         <Grid.RowDefinitions>
             <!--0번 없음, 작업예정-->
+
             <RowDefinition Height="30"/>
             <RowDefinition Height="60"/>
             <RowDefinition Height="*"/>
@@ -35,14 +28,6 @@
             <ColumnDefinition Width="247*"/>
         </Grid.ColumnDefinitions>
 
-
-
-
-        <StackPanel Grid.Row="0" Grid.ColumnSpan="3" Background="#FF4572A0">
-            <Button Command="{Binding CloseWindowCommand}" HorizontalAlignment="Right"  Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}">
-                <md:PackIcon Kind="Power" />
-            </Button>
-        </StackPanel>
         <ContentControl prism:RegionManager.RegionName="TopRegion" Grid.Row="1" Grid.ColumnSpan="3"/>
         <ContentControl prism:RegionManager.RegionName="MiddleRegion" Grid.Row="2" Grid.ColumnSpan="3"/>
         <ContentControl prism:RegionManager.RegionName="BottomRegion" Grid.Row="3" Grid.ColumnSpan="3"/>
