@@ -7,19 +7,18 @@
              xmlns:prism="http://prismlibrary.com/"
              prism:ViewModelLocator.AutoWireViewModel="True"
              mc:Ignorable="d" 
-             Height="130" Width="250" d:DesignWidth="400" FocusManager.FocusedElement="{Binding ElementName=tb}">
+             Height="130" Width="350.667" FocusManager.FocusedElement="{Binding ElementName=tb}">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="30"/>
-        </Grid.ColumnDefinitions>
-        <TextBlock Text="{Binding Notification.Description}" VerticalAlignment="Top" Height="21"/>
-        <TextBox Name="tb" Height="20" Text="{Binding AddItem, UpdateSourceTrigger=PropertyChanged}" TabIndex="0" Margin="0,23,0,56" >
-            <TextBox.InputBindings>
-                <KeyBinding Command="{Binding AddItemCommand}" Key="Return"/>
-            </TextBox.InputBindings>
-        </TextBox>
-        <Button Grid.Column="1" Height="20" Content="Add" Command="{Binding AddItemCommand}" TabIndex="1"/>
-        <TextBlock Text="{Binding ErrMsg}" TextWrapping="Wrap" Margin="0,45,0,0" Foreground="Red"/>
+        <StackPanel>
+            <!--<TextBlock Text="{Binding Notification.Description}" VerticalAlignment="Top"/>-->
+            <TextBox Name="tb" Height="25" Text="{Binding AddItem, UpdateSourceTrigger=PropertyChanged}" TabIndex="0">
+                <TextBox.InputBindings>
+                    <KeyBinding Command="{Binding AddItemCommand}" Key="Return"/>
+                </TextBox.InputBindings>
+            </TextBox>
+            <Button Grid.Column="1" Height="26" Content="Add" Command="{Binding AddItemCommand}" TabIndex="1"/>
+            <TextBlock Text="{Binding ErrMsg}" TextWrapping="Wrap" Foreground="Red" />
+        </StackPanel>
+
     </Grid>
 </Window>

@@ -70,32 +70,7 @@ namespace TKFIleTreeExporter.ViewModels
             var vm = popupAdd.DataContext as PopupAddViewModel;
             vm.CallerViewModel = this;
             popupAdd.Show();
-
-
-
-
-            //AddItemInteractionRequest.Raise(new AddItemNotification { Title = "Add Item", Description = thisControlName }, r =>
-            //{
-            //    if (r.Confirmed && r.AddItem != null)
-            //    {
-            //        ExceptionListModel el = new ExceptionListModel();
-            //        el.ExceptionString = r.AddItem;
-
-            //        // Douplicate 처리.
-            //        if (exceptionList.Any(p => p.ExceptionString == r.AddItem))
-            //        {
-            //            MessageBox.Show("\""+r.AddItem + "\"Already exist string.");
-            //        }
-            //        else
-            //            exceptionList.Add(el);
-
-            //        //현재 List의 이름 (디렉토리, 파일, 확장자) 이름과 함께 Save에 넘겨준다.
-            //        //Save에서 구분하기 위해서.
-            //        exceptionListWithName.exceptionList = exceptionList;
-            //        exceptionListWithName.controlName = thisControlName;
-            //        _ea.GetEvent<ExceptionListMsg>().Publish(exceptionListWithName);
-            //    }
-            //});
+            
         }
 
         public string AddItemFromPopup
@@ -116,6 +91,7 @@ namespace TKFIleTreeExporter.ViewModels
                     exceptionListWithName.controlName = thisControlName;
                     _ea.GetEvent<ExceptionListMsg>().Publish(exceptionListWithName);
 
+                    //값이 들어올경우 팝업을 닫는다.
                     popupAdd.Close();
                 }
             }
