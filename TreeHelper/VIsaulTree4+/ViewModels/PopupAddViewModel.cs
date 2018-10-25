@@ -108,12 +108,5 @@ namespace TKFIleTreeExporter.ViewModels
             }
             return true;
         }
-
-        //public INotification Notification
-        //{
-        //    get { return _notification; }
-        //    set { SetProperty(ref _notification, (IAddItemNotification)value); }
-        //}
-        //public Action FinishInteraction { get; set; }
     }
 }
