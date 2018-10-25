@@ -101,11 +101,9 @@
     <Compile Include="Messages\ExceptionListMsg.cs" />
     <Compile Include="Messages\LoadExceptionListMsg.cs" />
     <Compile Include="Messages\PathMsg.cs" />
-    <Compile Include="Models\AddItemNotification.cs" />
     <Compile Include="Models\ExceptionListModel.cs" />
     <Compile Include="Models\ExceptionListWithName.cs" />
     <Compile Include="Models\Files.cs" />
-    <Compile Include="Models\IAddItemNotification.cs" />
     <Compile Include="Shell.xaml.cs">
       <DependentUpon>Shell.xaml</DependentUpon>
     </Compile>

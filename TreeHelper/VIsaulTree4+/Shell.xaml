@@ -7,7 +7,7 @@
         xmlns:prism="http://prismlibrary.com/"
         mc:Ignorable="d"
        
-        Title="TK File tree exporter" Height="450" Width="500" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
+        Title="TK File tree exporter" Height="450" Width="500" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
 
 
     <Grid>

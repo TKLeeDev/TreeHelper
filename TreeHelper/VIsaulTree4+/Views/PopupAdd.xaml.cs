@@ -18,7 +18,7 @@ namespace TKFIleTreeExporter.Views
     /// <summary>
     /// Interaction logic for AddWritePopupView.xaml
     /// </summary>
-    public partial class PopupAddView : UserControl
+    public partial class PopupAddView : Window
     {
         public PopupAddView()
         {

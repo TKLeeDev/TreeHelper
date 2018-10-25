@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TKFIleTreeExporter.Models;
+using TKFIleTreeExporter.Views;
 
 namespace TKFIleTreeExporter.ViewModels
 {
-    class PopupAddViewModel : BindableBase, IInteractionRequestAware
+    class PopupAddViewModel : BindableBase
     {
-        private IAddItemNotification _notification;
+        public ExceptionListViewModel CallerViewModel { get; set; }
 
         private string _errMsg;
         public string ErrMsg
@@ -37,13 +38,8 @@ namespace TKFIleTreeExporter.ViewModels
 
         private void AcceptAddItem()
         {
+            CallerViewModel.AddItemFromPopup = AddItem;
 
-            _notification.AddItem = AddItem;
-
-
-            AddItem = "";
-            _notification.Confirmed = true;
-            FinishInteraction?.Invoke();
         }
 
         private bool CanExcuteAcceptAddItem()
@@ -59,8 +55,8 @@ namespace TKFIleTreeExporter.ViewModels
             }
 
 
-            //DirectoryName
-            if (_notification.Description == "DirectoryName")
+            ////DirectoryName
+            if (CallerViewModel.thisControlName == "Directory")
             {
                 string str = @"[~!@\#$%^&*\()\=+|\\/:;?""<>']";
                 System.Text.RegularExpressions.Regex rex = new System.Text.RegularExpressions.Regex(str);
@@ -75,7 +71,7 @@ namespace TKFIleTreeExporter.ViewModels
             }
 
             //FileName
-            if (_notification.Description == "FileName")
+            if (CallerViewModel.thisControlName == "File")
             {
                 if (!AddItem.Contains("."))
                 {
@@ -96,7 +92,7 @@ namespace TKFIleTreeExporter.ViewModels
             }
 
             //Extention
-            if (_notification.Description == "Extension")
+            if (CallerViewModel.thisControlName == "Extension")
             {  //특수문자확인.
                 string str = @"[~!@\#$%^&\()\=+|\\/:;?""<>']";
                 System.Text.RegularExpressions.Regex rex = new System.Text.RegularExpressions.Regex(str);
@@ -113,11 +109,11 @@ namespace TKFIleTreeExporter.ViewModels
             return true;
         }
 
-        public INotification Notification
-        {
-            get { return _notification; }
-            set { SetProperty(ref _notification, (IAddItemNotification)value); }
-        }
-        public Action FinishInteraction { get; set; }
+        //public INotification Notification
+        //{
+        //    get { return _notification; }
+        //    set { SetProperty(ref _notification, (IAddItemNotification)value); }
+        //}
+        //public Action FinishInteraction { get; set; }
     }
 }

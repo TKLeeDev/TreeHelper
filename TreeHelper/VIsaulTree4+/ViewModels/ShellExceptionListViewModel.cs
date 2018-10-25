@@ -59,7 +59,7 @@ namespace TKFIleTreeExporter.ViewModels
             {
                 ExceptionListWithName eLN = new ExceptionListWithName();
 
-                 ObservableCollection<ExceptionListModel> exceptionListDirectory = new ObservableCollection<ExceptionListModel>();
+                ObservableCollection<ExceptionListModel> exceptionListDirectory = new ObservableCollection<ExceptionListModel>();
                 ObservableCollection<ExceptionListModel> exceptionListFile = new ObservableCollection<ExceptionListModel>();
                 ObservableCollection<ExceptionListModel> exceptionListExtension = new ObservableCollection<ExceptionListModel>();
 
@@ -97,7 +97,7 @@ namespace TKFIleTreeExporter.ViewModels
                 }
 
 
-         
+
                 eLN.controlName = ItemControlNames.ItemName_Directory;
                 eLN.exceptionList = exceptionListDirectory;
                 _ea.GetEvent<LoadExceptionListMsg>().Publish(eLN);
@@ -107,7 +107,7 @@ namespace TKFIleTreeExporter.ViewModels
                 _ea.GetEvent<LoadExceptionListMsg>().Publish(eLN);
 
                 eLN.controlName = ItemControlNames.ItemName_Extension;
-                eLN.exceptionList = exceptionListExtension;          
+                eLN.exceptionList = exceptionListExtension;
                 _ea.GetEvent<LoadExceptionListMsg>().Publish(eLN);
             }
         }
@@ -164,7 +164,7 @@ namespace TKFIleTreeExporter.ViewModels
                 // 저장
                 File.WriteAllLines(saveFileDialog.FileName, strArr);
             }
-            
+
         }
     }
 }

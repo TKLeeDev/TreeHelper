@@ -11,17 +11,10 @@
              prism:ViewModelLocator.AutoWireViewModel="True"
              d:DesignHeight="450" d:DesignWidth="400">
 
-    <i:Interaction.Triggers>
-        <prism:InteractionRequestTrigger SourceObject="{Binding AddItemInteractionRequest}">
-            <prism:PopupWindowAction IsModal="True" CenterOverAssociatedObject="True">
-                <prism:PopupWindowAction.WindowContent>
-                    <view:PopupAddView/>
-                </prism:PopupWindowAction.WindowContent>
-            </prism:PopupWindowAction>
-        </prism:InteractionRequestTrigger>
-    </i:Interaction.Triggers>
+
 
     <Grid>
+
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
             <RowDefinition/>
@@ -49,7 +42,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        
-        
+
+
     </Grid>
 </UserControl>
