@@ -17,6 +17,12 @@ namespace TKFIleTreeExporter.ViewModels
 {
     class ExceptionListViewModel : BindableBase
     {
+
+        #region SetUI
+
+
+        #endregion
+
         PopupAddView popupAdd;
         /*Publish는 총 3개, 추가시, 제거시, 파일로드시*/
         ExceptionListWithName exceptionListWithName = new ExceptionListWithName();
@@ -27,6 +33,7 @@ namespace TKFIleTreeExporter.ViewModels
 
         public ExceptionListViewModel(IEventAggregator ea)
         {
+            
             _ea = ea;
             // ??? + save에서 MVVM모드일때 오는 aggregator 하나는??
             _ea.GetEvent<LoadExceptionListMsg>().Subscribe(LoadSubscribeFunction, ThreadOption.PublisherThread);

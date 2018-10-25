@@ -6,6 +6,7 @@
              xmlns:local="clr-namespace:TKFIleTreeExporter.Views"
              xmlns:prism="http://prismlibrary.com/"
              prism:ViewModelLocator.AutoWireViewModel="True"
+             xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
@@ -18,9 +19,16 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button Content="Save list" Grid.Column="0" Command="{Binding SaveCommand}" Margin="0 0 1 0 "/>
-            <Button Content="Load list" Grid.Column="1" Command="{Binding LoadCommand}"/>
-         </Grid>
+            <StackPanel Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Command="{Binding SaveCommand}" Margin="0 0 1 0 ">
+                    <md:PackIcon Kind="ContentSave"/>
+                </Button>
+                <Button Command="{Binding LoadCommand}">
+                    <md:PackIcon Kind="FolderOpen"/>
+                </Button>
+            </StackPanel>
+            
+        </Grid>
         <ItemsControl prism:RegionManager.RegionName="ListRegion" Grid.Row="1" Grid.ColumnSpan="2">
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
