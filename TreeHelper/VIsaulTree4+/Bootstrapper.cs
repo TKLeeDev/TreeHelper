@@ -28,19 +28,19 @@ namespace TKFIleTreeExporter
 
             var view = this.Container.Resolve<ExceptionListView>();
             var vm = view.DataContext as ExceptionListViewModel;
-            vm.Description = "Filter Directories";
+            vm.Description = "Filter : Directories";
             vm.thisControlName = ItemControlNames.ItemName_Directory;
             regionManager.Regions[RegionNames.Region_ListRegion].Add(view, ItemControlNames.ItemName_Directory);
 
             view = Container.Resolve<ExceptionListView>();
             vm = view.DataContext as ExceptionListViewModel;
-            vm.Description = "Filter Files";
+            vm.Description = "Filter : Files";
             vm.thisControlName = ItemControlNames.ItemName_File;
             regionManager.Regions[RegionNames.Region_ListRegion].Add(view, ItemControlNames.ItemName_File);
 
             view = Container.Resolve<ExceptionListView>();
             vm = view.DataContext as ExceptionListViewModel;
-            vm.Description = "Filter Extensions";
+            vm.Description = "Filter : Extensions";
             vm.thisControlName = ItemControlNames.ItemName_Extension;
             regionManager.Regions[RegionNames.Region_ListRegion].Add(view, ItemControlNames.ItemName_Extension);
 
