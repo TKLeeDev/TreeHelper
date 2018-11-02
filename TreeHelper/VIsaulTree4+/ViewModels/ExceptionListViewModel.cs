@@ -72,7 +72,7 @@ namespace TKFIleTreeExporter.ViewModels
             _addCommand ?? (_addCommand = new DelegateCommand(ExecuteAddCommand));
         void ExecuteAddCommand()
         {
-
+            
             popupAdd = new PopupAddView();
             var vm = popupAdd.DataContext as PopupAddViewModel;
             vm.CallerViewModel = this;

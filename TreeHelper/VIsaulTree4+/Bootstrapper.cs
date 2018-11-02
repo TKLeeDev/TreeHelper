@@ -22,7 +22,7 @@ namespace TKFIleTreeExporter
             var regionManager = this.Container.Resolve<IRegionManager>();
 
 
-            regionManager.RegisterViewWithRegion(RegionNames.Region_Top, typeof(OpenView));
+           // regionManager.RegisterViewWithRegion(RegionNames.Region_Top, typeof(OpenView));
 
             regionManager.RegisterViewWithRegion(RegionNames.Region_Middle, typeof(ShellExceptionListView));
 
