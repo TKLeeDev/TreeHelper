@@ -8,7 +8,7 @@
         prism:ViewModelLocator.AutoWireViewModel="True"
         mc:Ignorable="d"
        
-        Title="tklee.dev@gmail.com" Height="450" Width="500" WindowStartupLocation="CenterScreen" Background="#F4F5F7">
+        Title="VisualTree (tklee.me@gmail.com)" Height="450" Width="500" WindowStartupLocation="CenterScreen" Background="#F4F5F7" Icon="Imgs/Content-tree.ico" >
 
 
 
