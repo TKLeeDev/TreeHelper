@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisaulTree4Plus", "VIsaulTree4+\VisaulTree4Plus.csproj", "{867710A4-5CA4-4D43-89B0-B2FA4057E847}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Installer", "Installer\Installer.vdproj", "{E5B5BB82-EAB1-4333-9EE7-C23905C806FE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{867710A4-5CA4-4D43-89B0-B2FA4057E847}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{867710A4-5CA4-4D43-89B0-B2FA4057E847}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{867710A4-5CA4-4D43-89B0-B2FA4057E847}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5B5BB82-EAB1-4333-9EE7-C23905C806FE}.Debug|Any CPU.ActiveCfg = Debug
+		{E5B5BB82-EAB1-4333-9EE7-C23905C806FE}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

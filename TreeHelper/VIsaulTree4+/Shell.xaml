@@ -8,7 +8,7 @@
         prism:ViewModelLocator.AutoWireViewModel="True"
         mc:Ignorable="d"
        
-        Title="TK File tree exporter" Height="450" Width="500" WindowStartupLocation="CenterScreen" Background="#F4F5F7">
+        Title="tklee.dev@gmail.com" Height="450" Width="500" WindowStartupLocation="CenterScreen" Background="#F4F5F7">
 
 
 
